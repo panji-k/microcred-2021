@@ -14,7 +14,7 @@ st.title('Analisa Survey Perkembangan Data Scientist di Indonesia')
 
 # persiapan data frame global
 st.header('Sample Data Survey Global')
-df1 = pd.read_csv('kaggle_survey_2021_responses.csv')
+df1 = pd.read_csv('https://filedn.com/lePVfyAoiNxFBjMKNqcr2O7/MICROCREDENTIAL/ProjectTugasAkhir/survey_2021_responses.csv')
 df_sample_global = df1.head()
 st.write(df_sample_global)
 
