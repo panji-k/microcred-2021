@@ -26,6 +26,6 @@ df_sample_indo = df_indonesia.head()
 st.write(df_sample_indo)
 
 st.header('Kategori Umur Responden Indonesia')
-st.write(df_indonesia['Q1'].value_counts().sort_index().plot(kind='bar'))
+st.bar_chart(df_indonesia['Q1'].value_counts().sort_index().plot(kind='bar'))
 st.header('Kategori Umur Responden Global')
-st.write(df_global['Q1'].value_counts().sort_index().plot(kind='bar'))
+st.bar_chart(df_global['Q1'].value_counts().sort_index().plot(kind='bar'))
