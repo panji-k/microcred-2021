@@ -25,7 +25,8 @@ st.write('Dataset sudah difilter hanya Indonesia:')
 df_sample_indo = df_indonesia.head()
 st.write(df_sample_indo)
 
+# kategori berdasarkan umur
 st.header('Kategori Umur Responden Indonesia')
-st.bar_chart(df_indonesia['Q1'].value_counts().sort_index().plot(kind='bar'))
+st.bar_chart(df_indonesia['Q1'].value_counts().sort_index())
 st.header('Kategori Umur Responden Global')
-st.bar_chart(df_global['Q1'].value_counts().sort_index().plot(kind='bar'))
+st.bar_chart(df_global['Q1'].value_counts().sort_index())
