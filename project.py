@@ -47,7 +47,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-# Perbandingan jumlah responden Indonesia berdasarkan tingkat pendidikan
+# Perbandingan jumlah responden berdasarkan tingkat pendidikan
 st.header('Perbandingan jumlah responden Indonesia berdasarkan tingkat pendidikan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
@@ -62,7 +62,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-# Perbandingan jumlah responden Indonesia berdasarkan status pekerjaan
+# Perbandingan jumlah responden berdasarkan status pekerjaan
 st.header('Perbandingan jumlah responden Indonesia berdasarkan pekerjaan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
@@ -76,4 +76,15 @@ def countPlot():
     sns.countplot(y="Q5", data=df_global, order = df_global['Q5'].value_counts().index)
     st.pyplot(fig)
 countPlot()
+
+# Perbandingan jumlah responden berdasarkan pengalaman programming
+st.header('Perbandingan jumlah responden Indonesia berdasarkan pengalaman programming')
+def barPlot():
+    df_indonesia.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
+barPlot()
+
+st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
+def barPlot():
+    df_global.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
+barPlot()
 
