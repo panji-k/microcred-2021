@@ -61,3 +61,17 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
+# Perbandingan jumlah responden Indonesia berdasarkan status pekerjaan
+st.header('Perbandingan jumlah responden Indonesia berdasarkan pekerjaan')
+def countPlot():
+    fig = plt.figure(figsize=(10, 8))
+    sns.countplot(y="Q5", data=df_indonesia)
+    st.pyplot(fig)
+countPlot()
+
+st.header('Perbandingan jumlah responden Global berdasarkan pekerjaan')
+def countPlot():
+    fig = plt.figure(figsize=(10, 8))
+    sns.countplot(y="Q5", data=df_global[1:])
+    st.pyplot(fig)
+countPlot()
