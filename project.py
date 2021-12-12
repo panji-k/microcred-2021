@@ -80,13 +80,13 @@ countPlot()
 # Perbandingan jumlah responden berdasarkan pengalaman programming
 st.header('Perbandingan jumlah responden Indonesia berdasarkan pengalaman programming')
 def barPlot():
-    df_indonesia.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
-    plt.show()
+    # df_indonesia.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
+    st.bar_chart(df_indonesia['Q6'].value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
 def barPlot():
-    df_global.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
-    plt.show()
+    # df_global.Q6.value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']).plot(kind="bar")
+    st.bar_chart(df_global['Q6'].value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
