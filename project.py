@@ -45,3 +45,19 @@ def countPlot():
     sns.countplot(y="Q2", data=df_global[1:])
     st.pyplot(fig)
 countPlot()
+
+# Perbandingan jumlah responden Indonesia berdasarkan tingkat pendidikan
+st.header('Perbandingan jumlah responden Indonesia berdasarkan tingkat pendidikan')
+def countPlot():
+    fig = plt.figure(figsize=(10, 4))
+    sns.countplot(y="Q4", data=df_indonesia)
+    st.pyplot(fig)
+countPlot()
+
+st.header('Perbandingan jumlah responden Global berdasarkan tingkat pendidikan')
+def countPlot():
+    fig = plt.figure(figsize=(10, 4))
+    sns.countplot(y="Q4", data=df_global)
+    st.pyplot(fig)
+countPlot()
+
