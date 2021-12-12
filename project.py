@@ -33,6 +33,6 @@ st.bar_chart(df_global['Q1'].value_counts().sort_index())
 
 # kategori berdasarkan jenis kelamin
 st.header('Kategori Jenis Kelamin Responden Indonesia')
-st.plotly_chart(df_indonesia)
+st.area_chart(df_indonesia)
 st.header('Kategori Jenis Kelamin Responden Global')
-st.plotly_chart(df_global)
+st.area_chart(df_global)
