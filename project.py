@@ -15,6 +15,7 @@ st.title('Analisa Survey Perkembangan Data Scientist di Indonesia')
 # persiapan data frame global
 st.header('Sample Data Survey Global')
 df_global = pd.read_csv('https://filedn.com/lePVfyAoiNxFBjMKNqcr2O7/MICROCREDENTIAL/ProjectTugasAkhir/survey_2021_responses.csv')
+df_global = df_global[1:]
 df_sample_global = df_global.head()
 st.write(df_sample_global)
 
@@ -42,7 +43,7 @@ countPlot()
 st.header('Kategori Jenis Kelamin Responden Global')
 def countPlot():
     fig = plt.figure(figsize=(10, 5))
-    sns.countplot(y="Q2", data=df_global[1:])
+    sns.countplot(y="Q2", data=df_global)
     st.pyplot(fig)
 countPlot()
 
@@ -57,7 +58,7 @@ countPlot()
 st.header('Perbandingan jumlah responden Global berdasarkan tingkat pendidikan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q4", data=df_global[1:])
+    sns.countplot(y="Q4", data=df_global)
     st.pyplot(fig)
 countPlot()
 
@@ -71,7 +72,7 @@ countPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pekerjaan')
 def countPlot():
-    fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q5", data=df_global[1:], order = df_global['Q5'].value_counts().index)
+    fig = plt.figure(figsize=(10, 12))
+    sns.countplot(y="Q5", data=df_global, order = df_global['Q5'].value_counts().index)
     st.pyplot(fig)
 countPlot()
