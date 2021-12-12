@@ -30,3 +30,9 @@ st.header('Kategori Umur Responden Indonesia')
 st.bar_chart(df_indonesia['Q1'].value_counts().sort_index())
 st.header('Kategori Umur Responden Global')
 st.bar_chart(df_global['Q1'].value_counts().sort_index())
+
+# kategori berdasarkan jenis kelamin
+st.header('Kategori Jenis Kelamin Responden Indonesia')
+st.plotly_chart(df_indonesia)
+st.header('Kategori Jenis Kelamin Responden Global')
+st.plotly_chart(df_global)
