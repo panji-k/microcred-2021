@@ -58,7 +58,7 @@ countPlot()
 st.header('Perbandingan jumlah responden Global berdasarkan tingkat pendidikan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q4", data=df_global, order = df_global['Q5'].value_counts().index)
+    sns.countplot(y="Q4", data=df_global, order = df_global['Q4'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
