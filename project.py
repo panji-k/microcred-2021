@@ -34,14 +34,14 @@ st.bar_chart(df_global['Q1'].value_counts().sort_index())
 # kategori berdasarkan jenis kelamin
 st.header('Kategori Jenis Kelamin Responden Indonesia')
 def countPlot():
-    fig = plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 5))
     sns.countplot(y="Q2", data=df_indonesia)
     st.pyplot(fig)
 countPlot()
 
 st.header('Kategori Jenis Kelamin Responden Global')
 def countPlot():
-    fig = plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 5))
     sns.countplot(y="Q2", data=df_global[1:])
     st.pyplot(fig)
 countPlot()
@@ -57,7 +57,7 @@ countPlot()
 st.header('Perbandingan jumlah responden Global berdasarkan tingkat pendidikan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q4", data=df_global)
+    sns.countplot(y="Q4", data=df_global[1:])
     st.pyplot(fig)
 countPlot()
 
