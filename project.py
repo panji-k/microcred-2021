@@ -39,6 +39,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
+st.header('Kategori Jenis Kelamin Responden Global')
 def countPlot():
     fig = plt.figure(figsize=(10, 4))
     sns.countplot(y="Q2", data=df_global[1:])
