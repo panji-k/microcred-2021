@@ -65,13 +65,13 @@ countPlot()
 st.header('Perbandingan jumlah responden Indonesia berdasarkan pekerjaan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q5", data=df_indonesia)
+    sns.countplot(y="Q5", data=df_indonesia, order = df_indonesia['Q5'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pekerjaan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
-    sns.countplot(y="Q5", data=df_global[1:])
+    sns.countplot(y="Q5", data=df_global[1:], order = df_global['Q5'].value_counts().index)
     st.pyplot(fig)
 countPlot()
