@@ -14,8 +14,8 @@ st.title('Analisa Survey Perkembangan Data Scientist di Indonesia')
 
 # persiapan data frame global
 st.header('Sample Data Survey Global')
-df_global = pd.read_csv('https://filedn.com/lePVfyAoiNxFBjMKNqcr2O7/MICROCREDENTIAL/ProjectTugasAkhir/survey_2021_responses.csv')
-df_global = df_global[1:]
+df_global_full = pd.read_csv('https://filedn.com/lePVfyAoiNxFBjMKNqcr2O7/MICROCREDENTIAL/ProjectTugasAkhir/survey_2021_responses.csv')
+df_global = df_global_full[1:]
 df_sample_global = df_global.head()
 st.write(df_sample_global)
 
@@ -85,7 +85,6 @@ barPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
 def barPlot():
-    df_global_full = pd.read_csv('https://filedn.com/lePVfyAoiNxFBjMKNqcr2O7/MICROCREDENTIAL/ProjectTugasAkhir/survey_2021_responses.csv')
     st.bar_chart(df_global_full['Q6'].value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
