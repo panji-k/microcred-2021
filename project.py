@@ -224,14 +224,16 @@ st.write('Dari bagan di atas, kita dapat melihat bahwa Kaggle Learn Courses adal
 st.header('Perbandingan Tools yang Digunakan di Indonesia')
 def countPlot():
     fig = plt.figure(figsize=(10, 6))
-    sns.countplot(y="Q41",palette = 'muted', data=df_indonesia)
+    sns.countplot(y="Q41",palette = 'muted', data=df_indonesia, order = df_indonesia['Q41'])
     st.pyplot(fig)
 countPlot()
 
 st.header('Perbandingan Tools yang Digunakan di Dunia')
 def countPlot():
     fig = plt.figure(figsize=(10, 6))
-    sns.countplot(y="Q41",palette = 'muted', data=df_global)
+    sns.countplot(y="Q41",palette = 'muted', data=df_global, order = df_global['Q41'])
     st.pyplot(fig)
 countPlot()
 
+st.write('Dari grafik di atas, orang Indonesia tampaknya lebih memilih perangkat lunak statistik dasar untuk melakukan analisis data mereka sementara orang-orang secara global menggunakan development tools (RStudio, jupyterlab, dll) sebagai tools utama mereka.')
+st.write('Hal ini menunjukkan bahwa data scientist di Indonesia harus meningkatkan skillnya agar dapat bersaing secara global.')
