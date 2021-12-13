@@ -223,15 +223,15 @@ st.write('Dari bagan di atas, kita dapat melihat bahwa Kaggle Learn Courses adal
 # Perbandingan Tools yang Digunakan
 st.header('Perbandingan Tools yang Digunakan di Indonesia')
 def countPlot():
-    fig = plt.figure(figsize=(10, 6))
-    sns.countplot(y="Q41",palette = 'muted', data=df_indonesia, order = df_indonesia['Q41'])
+    fig = plt.figure(figsize=(10, 8))
+    sns.countplot(y="Q41", data=df_indonesia, order = df_indonesia['Q41'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
 st.header('Perbandingan Tools yang Digunakan di Dunia')
 def countPlot():
-    fig = plt.figure(figsize=(10, 6))
-    sns.countplot(y="Q41",palette = 'muted', data=df_global, order = df_global['Q41'])
+    fig = plt.figure(figsize=(10, 8))
+    sns.countplot(y="Q41", data=df_global, order = df_global['Q41'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
