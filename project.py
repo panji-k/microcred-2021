@@ -138,3 +138,18 @@ barPlot()
 
 st.write('Bahasa pemrograman yang paling populer adalah Python, seperti yang diharapkan baik di Indonesia maupun secara global.')
 st.write('Setelah kita melakukan beberapa penelitian sederhana, Python banyak digunakan dari bahasa lain karena: Python lebih produktif, memiliki daya saing dan inovasi yang cepat, memiliki berbagai library, framework, dan komunitas yang sangat besar.')
+
+# Perbandingan Pekerjaan Berdasarkan Bidang Industri
+st.header('Perbandingan Pekerjaan Berdasarkan Bidang Industri di Indonesia')
+def countPlot():
+    fig = plt.figure(figsize=(10, 8))
+    sns.countplot(y="Q20", data=df_indonesia, order = df_indonesia['Q20'].value_counts().index)
+    st.pyplot(fig)
+countPlot()
+
+st.header('Perbandingan Pekerjaan Berdasarkan Bidang Industri secara Global')
+def countPlot():
+    fig = plt.figure(figsize=(10, 12))
+    sns.countplot(y="Q20", data=df_global, order = df_global['Q20'].value_counts().index)
+    st.pyplot(fig)
+countPlot()
