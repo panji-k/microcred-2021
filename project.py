@@ -103,6 +103,9 @@ def barPlot():
     bash = df_indonesia.Q7_Part_10.value_counts()[0]
     matlab = df_indonesia.Q7_Part_11.value_counts()[0]
     values_1 = [python,r,sql,c,c_plus,java,javascript,julia,bash,matlab]
+
+    fig = plt.figure(figsize = (10, 8))
+
     plt.bar(languages,values_1)
     plt.xticks(rotation=45)
     plt.title("Bahasa Pemrograman yang Paling Banyak Digunakan di Indonesia")
@@ -123,11 +126,13 @@ def barPlot():
     bash = df_global.Q7_Part_10.value_counts()[0]
     matlab = df_global.Q7_Part_11.value_counts()[0]
     values_2 = [python,r,sql,c,c_plus,java,javascript,julia,swift,bash,matlab]
+
+    fig = plt.figure(figsize = (10, 8))
+
     plt.bar(languages_global,values_2)
     plt.xticks(rotation=45)
     plt.title("Bahasa Pemrograman yang Paling Banyak Digunakan di Dunia")
 barPlot()
 
 st.write('Bahasa pemrograman yang paling populer adalah Python, seperti yang diharapkan baik di Indonesia maupun secara global.')
-st.write('')
 st.write('Setelah kita melakukan beberapa penelitian sederhana, Python banyak digunakan dari bahasa lain karena: Python lebih produktif, memiliki daya saing dan inovasi yang cepat, memiliki berbagai library, framework, dan komunitas yang sangat besar.')
