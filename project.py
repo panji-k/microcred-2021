@@ -169,3 +169,51 @@ barPlot()
 
 st.write('Dari grafik di atas kita dapat melihat bahwa gaji untuk data scientist baik di Indonesia maupun global sebagian besar adalah $0-999. Ini menunjukkan bahwa gaji di Indonesia pun cukup menjanjikan dan kompetitif.')
 
+# Perbandingan Penyedia Course yang Digunakan
+st.header('Perbandingan Penyedia Course yang Digunakan di Indonesia')
+def barPlot():
+    course = ['Cousera','edX',"Kaggle Learn Courses",'DataCamp','Fast.ai','Udacity',"Udemy","LinkedIn Learning","Cloud","University Courses","None"]
+    coursera=df_indonesia.Q40_Part_1.value_counts()[0]
+    edx= df_indonesia.Q40_Part_2.value_counts()[0]
+    klc=df_indonesia.Q40_Part_3.value_counts()[0]
+    dc=df_indonesia.Q40_Part_4.value_counts()[0]
+    fa =df_indonesia.Q40_Part_5.value_counts()[0]
+    udacity = df_indonesia.Q40_Part_6.value_counts()[0]
+    udemy=df_indonesia.Q40_Part_7.value_counts()[0]
+    ll = df_indonesia.Q40_Part_8.value_counts()[0]
+    cc = df_indonesia.Q40_Part_9.value_counts()[0]
+    uc = df_indonesia.Q40_Part_10.value_counts()[0]
+    none = df_indonesia.Q40_Part_11.value_counts()[0]
+    values_3 = [coursera,edx,klc,dc,fa,udacity,udemy,ll,cc,uc,none]
+
+    fig = plt.figure(figsize = (10, 8))
+
+    plt.bar(course,values_3)
+    plt.xticks(rotation=90)
+    plt.title("Penyedia Course yang Sering Digunakan di Indonesia")
+    st.pyplot(fig)
+barPlot()
+
+st.header('Perbandingan Penyedia Course yang Digunakan di Indonesia')
+def barPlot():
+    course_global = ['Cousera','edX',"Kaggle Learn Courses",'DataCamp','Fast.ai','Udacity',"Udemy","LinkedIn Learning","Cloud","University Courses","None"]
+    coursera=df_global.Q40_Part_1.value_counts()[0]
+    edx= df_global.Q40_Part_2.value_counts()[0]
+    klc=df_global.Q40_Part_3.value_counts()[0]
+    dc=df_global.Q40_Part_4.value_counts()[0]
+    fa =df_global.Q40_Part_5.value_counts()[0]
+    udacity = df_global.Q40_Part_6.value_counts()[0]
+    udemy=df_global.Q40_Part_7.value_counts()[0]
+    ll = df_global.Q40_Part_8.value_counts()[0]
+    cc = df_global.Q40_Part_9.value_counts()[0]
+    uc = df_global.Q40_Part_10.value_counts()[0]
+    none = df_global.Q40_Part_11.value_counts()[0]
+    values_4 = [coursera,edx,klc,dc,fa,udacity,udemy,ll,cc,uc,none]
+
+    fig = plt.figure(figsize = (10, 8))
+
+    plt.bar(course_global,values_4)
+    plt.xticks(rotation=90)
+    plt.title("Penyedia Course yang Sering Digunakan di Dunia")
+    st.pyplot(fig)
+barPlot()
