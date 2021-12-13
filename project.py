@@ -29,7 +29,7 @@ st.write(df_sample_indo)
 # kategori berdasarkan umur
 st.header('Kategori Umur Responden Indonesia')
 st.bar_chart(df_indonesia['Q1'].value_counts().sort_index())
-st.header('Kategori Umur Responden Global')
+st.header('Kategori Umur responden di dunia')
 st.bar_chart(df_global['Q1'].value_counts().sort_index())
 
 # kategori berdasarkan jenis kelamin
@@ -40,7 +40,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-st.header('Kategori Jenis Kelamin Responden Global')
+st.header('Kategori Jenis Kelamin responden di dunia')
 def countPlot():
     fig = plt.figure(figsize=(10, 5))
     sns.countplot(y="Q2", data=df_global)
@@ -55,7 +55,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-st.header('Perbandingan jumlah responden Global berdasarkan tingkat pendidikan')
+st.header('Perbandingan jumlah responden di dunia berdasarkan tingkat pendidikan')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
     sns.countplot(y="Q4", data=df_global, order = df_global['Q4'].value_counts().index)
@@ -70,7 +70,7 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-st.header('Perbandingan jumlah responden Global berdasarkan pekerjaan')
+st.header('Perbandingan jumlah responden di dunia berdasarkan pekerjaan')
 def countPlot():
     fig = plt.figure(figsize=(10, 12))
     sns.countplot(y="Q5", data=df_global, order = df_global['Q5'].value_counts().index)
@@ -83,7 +83,7 @@ def barPlot():
     st.bar_chart(df_indonesia['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
-st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
+st.header('Perbandingan jumlah responden di dunia berdasarkan pengalaman programming')
 def barPlot():
     st.bar_chart(df_global['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
@@ -112,7 +112,7 @@ def barPlot():
     st.pyplot(fig)
 barPlot()
 
-st.header('Perbandingan Bahasa Pemrograman yang Digunakan secara Global')
+st.header('Perbandingan Bahasa Pemrograman yang Digunakan di Dunia')
 def barPlot():
     languages_global = ['Python','R','SQL','C','C++','Java',"Javascript","Julia","Swift","Bash","Matlab"]
     python=df_global.Q7_Part_1.value_counts()[0]
@@ -136,7 +136,7 @@ def barPlot():
     st.pyplot(fig)
 barPlot()
 
-st.write('Bahasa pemrograman yang paling populer adalah Python, seperti yang diharapkan baik di Indonesia maupun secara global.')
+st.write('Bahasa pemrograman yang paling populer adalah Python, seperti yang diharapkan baik di Indonesia maupun di Dunia.')
 st.write('Setelah kita melakukan beberapa penelitian sederhana, Python banyak digunakan dari bahasa lain karena: Python lebih produktif, memiliki daya saing dan inovasi yang cepat, memiliki berbagai library, framework, dan komunitas yang sangat besar.')
 
 # Perbandingan Pekerjaan Berdasarkan Bidang Industri
@@ -147,14 +147,14 @@ def countPlot():
     st.pyplot(fig)
 countPlot()
 
-st.header('Perbandingan Pekerjaan Berdasarkan Bidang Industri secara Global')
+st.header('Perbandingan Pekerjaan Berdasarkan Bidang Industri di Dunia')
 def countPlot():
     fig = plt.figure(figsize=(10, 8))
     sns.countplot(y="Q20", data=df_global, order = df_global['Q20'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
-st.write('Kita dapat melihat bahwa sebagian besar responden secara global saat ini bekerja di industri berbasis teknologi. Sedangkan di Indonesia, sebagian besar saat ini bekerja di bidang akademik/pendidikan. Kita bisa berharap lebih banyak orang Indonesia memasuki industri berbasis teknologi')
+st.write('Kita dapat melihat bahwa sebagian besar responden di Dunia saat ini bekerja di industri berbasis teknologi. Sedangkan di Indonesia, sebagian besar saat ini bekerja di bidang akademik/pendidikan. Kita bisa berharap lebih banyak orang Indonesia memasuki industri berbasis teknologi')
 
 # Perbandingan Jumlah Gaji yang Diterima Dalam USD
 st.header('Perbandingan Jumlah Gaji yang Diterima di Indonesia Dalam USD')
@@ -162,7 +162,7 @@ def barPlot():
     st.bar_chart(df_indonesia['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
 barPlot()
 
-st.header('Perbandingan Jumlah Gaji yang Diterima di Indonesia Dalam USD')
+st.header('Perbandingan Jumlah Gaji yang Diterima di Dunia Dalam USD')
 def barPlot():
     st.bar_chart(df_global['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
 barPlot()
