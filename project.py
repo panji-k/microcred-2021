@@ -50,14 +50,14 @@ countPlot()
 # Perbandingan jumlah responden berdasarkan tingkat pendidikan
 st.header('Perbandingan jumlah responden Indonesia berdasarkan tingkat pendidikan')
 def countPlot():
-    fig = plt.figure(figsize=(10, 8))
+    fig = plt.figure(figsize=(10, 6))
     sns.countplot(y="Q4", data=df_indonesia, order = df_indonesia['Q4'].value_counts().index)
     st.pyplot(fig)
 countPlot()
 
 st.header('Perbandingan jumlah responden di dunia berdasarkan tingkat pendidikan')
 def countPlot():
-    fig = plt.figure(figsize=(10, 8))
+    fig = plt.figure(figsize=(10, 6))
     sns.countplot(y="Q4", data=df_global, order = df_global['Q4'].value_counts().index)
     st.pyplot(fig)
 countPlot()
