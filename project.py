@@ -72,7 +72,7 @@ countPlot()
 
 st.header('Perbandingan jumlah responden di dunia berdasarkan pekerjaan')
 def countPlot():
-    fig = plt.figure(figsize=(10, 12))
+    fig = plt.figure(figsize=(10, 8))
     sns.countplot(y="Q5", data=df_global, order = df_global['Q5'].value_counts().index)
     st.pyplot(fig)
 countPlot()
@@ -104,7 +104,7 @@ def barPlot():
     matlab = df_indonesia.Q7_Part_11.value_counts()[0]
     values_1 = [python,r,sql,c,c_plus,java,javascript,julia,bash,matlab]
 
-    fig = plt.figure(figsize = (10, 8))
+    fig = plt.figure(figsize = (10, 6))
 
     plt.bar(languages,values_1)
     plt.xticks(rotation=45)
@@ -128,7 +128,7 @@ def barPlot():
     matlab = df_global.Q7_Part_11.value_counts()[0]
     values_2 = [python,r,sql,c,c_plus,java,javascript,julia,swift,bash,matlab]
 
-    fig = plt.figure(figsize = (10, 8))
+    fig = plt.figure(figsize = (10, 6))
 
     plt.bar(languages_global,values_2)
     plt.xticks(rotation=45)
@@ -186,7 +186,7 @@ def barPlot():
     none = df_indonesia.Q40_Part_11.value_counts()[0]
     values_3 = [coursera,edx,klc,dc,fa,udacity,udemy,ll,cc,uc,none]
 
-    fig = plt.figure(figsize = (10, 8))
+    fig = plt.figure(figsize = (10, 6))
 
     plt.bar(course,values_3)
     plt.xticks(rotation=90)
@@ -210,7 +210,7 @@ def barPlot():
     none = df_global.Q40_Part_11.value_counts()[0]
     values_4 = [coursera,edx,klc,dc,fa,udacity,udemy,ll,cc,uc,none]
 
-    fig = plt.figure(figsize = (10, 8))
+    fig = plt.figure(figsize = (10, 6))
 
     plt.bar(course_global,values_4)
     plt.xticks(rotation=90)
