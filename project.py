@@ -109,6 +109,7 @@ def barPlot():
     plt.bar(languages,values_1)
     plt.xticks(rotation=45)
     plt.title("Bahasa Pemrograman yang Paling Banyak Digunakan di Indonesia")
+    st.pyplot(fig)
 barPlot()
 
 st.header('Perbandingan Bahasa Pemrograman yang Digunakan secara Global')
@@ -132,6 +133,7 @@ def barPlot():
     plt.bar(languages_global,values_2)
     plt.xticks(rotation=45)
     plt.title("Bahasa Pemrograman yang Paling Banyak Digunakan di Dunia")
+    st.pyplot(fig)
 barPlot()
 
 st.write('Bahasa pemrograman yang paling populer adalah Python, seperti yang diharapkan baik di Indonesia maupun secara global.')
