@@ -80,12 +80,12 @@ countPlot()
 # Perbandingan jumlah responden berdasarkan pengalaman programming
 st.header('Perbandingan jumlah responden Indonesia berdasarkan pengalaman programming')
 def barPlot():
-    st.bar_chart(df_indonesia['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+    st.altair_chart(df_indonesia['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
 def barPlot():
-    st.bar_chart(df_global['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+    st.altair_chart(df_global['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
 barPlot()
 
 # Perbandingan Bahasa Pemrograman yang Digunakan
@@ -160,11 +160,11 @@ st.write('Kita dapat melihat bahwa sebagian besar responden secara global saat i
 st.header('Perbandingan Jumlah Gaji yang Diterima di Indonesia Dalam USD')
 def barPlot():
     df_indonesia.sort_values(by=['Q25'])
-    st.bar_chart(df_indonesia['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
+    st.altair_chart(df_indonesia['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
 barPlot()
 
 st.header('Perbandingan Jumlah Gaji yang Diterima di Indonesia Dalam USD')
 def barPlot():
     df_global.sort_values(by=['Q25'])
-    st.bar_chart(df_global['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
+    st.altair_chart(df_global['Q25'].value_counts().reindex(['$0-999', '1,000-1,999', '2,000-2,999', '3,000-3,999','4,000-4,999','5,000-7,499', '7,500-9,999','10,000-14,999','15,000-19,999','20,000-24,999','25,000-29,999','30,000-39,999', '40,000-49,999','50,000-59,999','60,000-69,999','70,000-79,999','80,000-89,999', '90,000-99,999','100,000-124,999','125,000-149,999','150,000-199,999','200,000-249,999','250,000-299,999', '300,000-499,999','$500,000-999,999','>$1,000,000']))
 barPlot()
