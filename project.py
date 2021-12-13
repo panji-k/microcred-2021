@@ -80,12 +80,20 @@ countPlot()
 # Perbandingan jumlah responden berdasarkan pengalaman programming
 st.header('Perbandingan jumlah responden Indonesia berdasarkan pengalaman programming')
 def barPlot():
+<<<<<<< HEAD
     st.altair_chart(df_indonesia['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+=======
+    st.bar_chart(df_indonesia['Q6'].value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+>>>>>>> parent of 8d9eb51 (fix I have never written code Q6)
 barPlot()
 
 st.header('Perbandingan jumlah responden Global berdasarkan pengalaman programming')
 def barPlot():
+<<<<<<< HEAD
     st.altair_chart(df_global['Q6'].value_counts().reindex(['I have never written code', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+=======
+    st.bar_chart(df_global['Q6'].value_counts().reindex(['Belum Pernah', '< 1 years', '1-3 years', '3-5 years','5-10 years','10-20 years','20+ years']))
+>>>>>>> parent of 8d9eb51 (fix I have never written code Q6)
 barPlot()
 
 # Perbandingan Bahasa Pemrograman yang Digunakan
