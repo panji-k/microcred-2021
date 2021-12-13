@@ -149,7 +149,10 @@ countPlot()
 
 st.header('Perbandingan Pekerjaan Berdasarkan Bidang Industri secara Global')
 def countPlot():
-    fig = plt.figure(figsize=(10, 12))
+    fig = plt.figure(figsize=(10, 8))
     sns.countplot(y="Q20", data=df_global, order = df_global['Q20'].value_counts().index)
     st.pyplot(fig)
 countPlot()
+
+st.write('Kita dapat melihat bahwa sebagian besar pengguna kaggle secara global saat ini bekerja di industri berbasis teknologi. Sedangkan di Indonesia, sebagian besar saat ini bekerja di bidang akademik/pendidikan. Kita bisa berharap lebih banyak orang Indonesia memasuki industri berbasis teknologi')
+
