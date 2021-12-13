@@ -217,3 +217,21 @@ def barPlot():
     plt.title("Penyedia Course yang Sering Digunakan di Dunia")
     st.pyplot(fig)
 barPlot()
+
+st.write('Dari bagan di atas, kita dapat melihat bahwa Kaggle Learn Courses adalah platform paling populer di Indonesia di kalangan pelajar baru untuk kursus terkait Ilmu Data, sementara Coursera adalah platform paling populer secara global.')
+
+# Perbandingan Tools yang Digunakan
+st.header('Perbandingan Tools yang Digunakan di Indonesia')
+def countPlot():
+    fig = plt.figure(figsize=(10, 6))
+    sns.countplot(y="Q41",palette = 'muted', data=df_indonesia)
+    st.pyplot(fig)
+countPlot()
+
+st.header('Perbandingan Tools yang Digunakan di Dunia')
+def countPlot():
+    fig = plt.figure(figsize=(10, 6))
+    sns.countplot(y="Q41",palette = 'muted', data=df_global)
+    st.pyplot(fig)
+countPlot()
+
